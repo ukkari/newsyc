@@ -28,6 +28,8 @@
 
 #import "UIApplication+ActivityIndicator.h"
 #import "UINavigationItem+MultipleItems.h"
+#import "SRWindow.h"
+
 
 @implementation UINavigationController (AppDelegate)
 
@@ -187,7 +189,7 @@
     pingController = [[PingController alloc] init];
     [pingController setDelegate:self];
     [pingController ping];
-    
+    [SRWindow sharedInstance:@"newsyc"];
     return YES;
 }
          
